@@ -23,14 +23,10 @@ Handlebars.registerHelper('date', function (date) {
 metalsmith(__dirname)
     .metadata({
         site: {
-            name: 'My site',
-            description: "My super sweet Metalsmith site on Netlify.",
-            generatorname: "Metalsmith",
-            generatorurl: "http://metalsmith.io/",
-            generatortitle: "Check out Metalsmith!",
-            hostname: "Netlify",
-            hosturl: "https://netlify.com/",
-            hosttitle: "Learn more about Netlify"
+            name: 'Chromeflags',
+            description: "List of Chromium Command Line Switches « Peter Beverloo",
+            hostname: "chromeflags",
+            hosturl: "https://chromeflags.win/",
         }
     })
     .source('./src')
@@ -57,7 +53,7 @@ metalsmith(__dirname)
         partials: 'layouts/partials'
     }))
     .use(sitemap({
-        hostname: "https://andreasvirkus.me"
+        hostname: "https://chromeflags.win"
     }))
     .build(function (err) {
         if (err) throw err;
